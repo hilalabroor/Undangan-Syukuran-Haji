@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Walimatus Safar Haji</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="audio" src="audio.mp3" loop></audio>
+
+<section class="cover" id="cover">
+    <div class="card-undangan">
+        <div class="ornament-top"><i class="fa-solid fa-mosque"></i></div>
+        <!-- <p class="kepada">Kepada Yth. <br><span id="namaTamu">Tamu Undangan</span></p> -->
+        
+        <h2 class="sub-judul">UNDANGAN</h2>
+        <h1 class="judul">Walimatus Safar Haji</h1>
+
+        <div class="foto-wrapper">
+            <img src="foto.jpg" alt="Foto Jemaah">
+        </div>
+        
+        <h2 class="nama">dr. Witha Septi.H</h2>
+
+        <button class="btn-buka" onclick="bukaUndangan()">
+            <i class="fa-solid fa-envelope-open-text"></i> Buka Undangan
+        </button>
+    </div>
+</section>
+
+<section class="content" id="content">
+    <div class="card-undangan fade-in">
+        <h1 class="arabic">﷽</h1>
+        <h3>Assalamu'alaikum Wr. Wb.</h3>
+        
+        <p class="text">
+            Segala puji dan syukur kami panjatkan ke hadirat Allah SWT. 
+            Dengan penuh rasa syukur, kami bermaksud mengundang Bapak/Ibu/Saudara/i 
+            dalam acara <strong>Tasyakuran & Doa Bersama</strong> sebelum keberangkatan nanda kami, <strong>dr. Witha Septi.H</strong>, ke tanah suci untuk menunaikan 
+            <strong>Ibadah Haji</strong> yang Insya Allah akan diselenggarakan pada:
+        </p>
+
+        <div class="info-acara">
+            <div class="item">
+                <i class="fa-solid fa-calendar-day"></i>
+                <p><strong>Rabu, 8 April 2026</strong></p>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-clock"></i>
+                <p><strong>Pukul 09.00 - Selesai</strong></p>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-location-dot"></i>
+                <p><strong>Sembalun, Lombok Timur</strong></p>
+            </div>
+        </div>
+
+        <a href="https://maps.google.com" target="_blank">
+            <button class="btn-lokasi"><i class="fa-solid fa-map-location-dot"></i> Lihat Lokasi Maps</button> <br>
+        </a>
+
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15774.2045437877!2d116.5255!3d-8.3567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcc49377484a0d7%3A0x5030bf4529329c0!2sSembalun!5e0!3m2!1sid!2sid!4v1710000000000" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <p class="doa">
+            "Semoga menjadi Haji yang mabrur, sa'yan masykuran, dan dzanban maghfuran."
+            <br><strong>Aamiin Yaa Rabbal 'Aalamiin.</strong>
+        </p>
+        
+        <div class="divider"></div>
+        <p class="hormat">Hormat Kami,<br><strong>Keluarga dr. Witha Septi.H</strong></p>
+    </div>
+</section>
+
+<button id="audioBtn" class="audio-btn" onclick="toggleAudio()">
+    <i class="fa-solid fa-play"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

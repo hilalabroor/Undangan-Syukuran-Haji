@@ -1,0 +1,155 @@
+:root {
+    --primary: #0f5c4d; /* Hijau Tua */
+    --secondary: #d4af37; /* Emas */
+    --bg-krem: #f7f1df;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.card-undangan {
+    background: var(--bg-krem);
+    width: 85%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 30px 20px;
+    border-radius: 50px 50px 20px 20px; /* Atas melengkung */
+    border: 4px double var(--secondary);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    text-align: center;
+    position: relative;
+}
+
+/* Ornamen Masjid di Atas */
+.ornament-top {
+    font-size: 30px;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.judul {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+    font-size: 26px;
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
+
+.sub-judul {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--secondary);
+    margin-bottom: 0;
+}
+
+.foto-wrapper {
+    margin: 25px auto;
+    width: 180px;
+    height: 230px;
+    border: 3px solid var(--secondary);
+    border-radius: 100px 100px 10px 10px; /* Bentuk Kubah */
+    overflow: hidden;
+}
+
+.foto-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arabic {
+    font-family: serif;
+    font-size: 30px;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+.text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.info-acara {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 20px 0;
+    border-left: 5px solid var(--secondary);
+}
+
+.info-acara .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.info-acara i {
+    color: var(--primary);
+}
+
+button {
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.btn-buka, .btn-lokasi {
+    padding: 12px 25px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-buka:hover, .btn-lokasi:hover {
+    transform: scale(1.05);
+    background: #167a67;
+}
+
+.content {
+    display: none; /* Awalnya sembunyi */
+}
+
+/* Animasi Muncul */
+.fade-in {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.audio-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--secondary);
+    border: none;
+    z-index: 999;
+}
+
+/* mengatur teks doa dan hormat */
+.doa, .hormat {
+    font-size: 14px;
+    font-style: italic;
+}
