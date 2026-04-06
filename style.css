@@ -81,24 +81,46 @@ body {
 }
 
 .info-acara {
-    background: white;
-    padding: 15px;
+    background: #fff;
+    padding: 20px;
     border-radius: 15px;
     margin: 20px 0;
-    border-left: 5px solid var(--secondary);
+    border: 1px solid #eee;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
 }
 
 .info-acara .item {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 8px;
-    font-size: 16px;
+    align-items: flex-start; /* Ikon tetap di atas baris pertama */
+    gap: 12px;               /* Jarak konsisten antara ikon dan teks */
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.info-acara .item:last-child {
+    margin-bottom: 0;
 }
 
 .info-acara i {
+    color: var(--secondary);
+    font-size: 16px;
+    width: 20px;            /* Lebar container ikon tetap agar teks sejajar vertikal */
+    text-align: center;
+    flex-shrink: 0;         /* Mencegah ikon gepeng saat teks panjang */
+    margin-top: 4px;        /* Menyesuaikan posisi ikon dengan tinggi huruf */
+}
+
+.info-acara p {
+    margin: 0;
+    line-height: 1.4;       /* Jarak antar baris agar enak dibaca */
+    color: #333;
+    font-size: 13px;        /* Sedikit lebih kecil agar muat untuk alamat panjang */
+}
+
+.info-acara strong {
+    display: inline;        /* PENTING: Jangan gunakan block agar teks tidak turun */
     color: var(--primary);
+    font-weight: 600;
 }
 
 button {
@@ -152,4 +174,16 @@ button {
 .doa, .hormat {
     font-size: 14px;
     font-style: italic;
+}
+
+.map-container {
+    width: 100%;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.map-container iframe {
+    width: 100% !important; /* Memaksa peta mengikuti lebar card */
+    border: none;
 }
